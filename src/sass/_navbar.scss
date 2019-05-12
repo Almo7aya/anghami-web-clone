@@ -1,6 +1,9 @@
 .navbar {
     grid-area: navbar;
     background-color: var(--main-bg-color);
+
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .navbar-items-holder {
@@ -83,6 +86,13 @@
         background-color: transparent;
         color: var(--navbar-title-color);
     }
+}
+
+.navbar-lead {
+    margin: 1.2rem;
+
+    font-size: 1.2rem;
+    color: var(--navbar-title-color);
 }
 
 .navbar-toggler {
