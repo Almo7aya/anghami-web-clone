@@ -1,8 +1,8 @@
 .main-grid-container {
     display: grid;
-    grid-template-columns: 227px 4fr 1fr;
-    grid-template-rows: 60px 1fr 60px;
-    height: 100vh;
+    grid-template-columns: 227px 2.65fr 1fr;
+    grid-template-rows: var(--header-height) 1fr var(--player-height);
+    min-height: 100vh;
 
     grid-template-areas:
         "header header header"

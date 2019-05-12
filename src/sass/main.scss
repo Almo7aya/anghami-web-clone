@@ -34,3 +34,12 @@ a:visited {
     color: inherit;
     text-decoration: none;
 }
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+}
