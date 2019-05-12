@@ -30,7 +30,7 @@
 .fake-loader {
   display: block;
   height: .2rem;
-  animation: fake-loader 1s cubic-bezier(0.65, 0.64, 0.58, -0.17);
+  animation: fake-loader 2s cubic-bezier(0.65, 0.64, 0.58, -0.17);
   background-color: var(--main-ang-color);
   position: absolute;
   top: 0;
@@ -120,7 +120,7 @@
   height: 4.5rem;
   min-width: 4.5rem;
   margin: .9rem;
-  margin-right: 5.5rem;
+  margin-right: 3.5rem;
   border: 0.1rem solid var(--main-text-color);
   border-radius: 50%;
   background-image: var(--user-avatar);
@@ -245,7 +245,28 @@
 
 .main-section {
   grid-area: main;
-  background-color: var(--sec-bg-color); }
+  background-color: var(--sec-bg-color);
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.main-big-slider {
+  padding: 1rem 2rem;
+  width: 100%;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: repeat(4, 21.5rem);
+  grid-template-rows: 21.5rem;
+  grid-auto-rows: 21.5rem;
+  grid-auto-columns: 21.5rem;
+  row-gap: 1rem;
+  column-gap: 2rem;
+  grid-auto-flow: column; }
+
+.main-big-slider-item {
+  position: relative;
+  box-shadow: var(--gray-shadow);
+  background-color: red;
+  border-radius: .4rem; }
 
 .player {
   grid-area: player;
@@ -372,7 +393,8 @@
 *::after,
 *::before {
   margin: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  outline: none; }
 
 html {
   box-sizing: border-box;

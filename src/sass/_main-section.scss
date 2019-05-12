@@ -2,4 +2,36 @@
     grid-area: main;
 
     background-color: var(--sec-bg-color);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.main-big-slider {
+    padding: 1rem 2rem;
+    width: 100%;
+
+    overflow-x: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(4, 21.5rem);
+    grid-template-rows: 21.5rem;
+    grid-auto-rows: 21.5rem;
+    grid-auto-columns: 21.5rem;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    grid-auto-flow: column;
+}
+
+.main-big-slider-item {
+    position: relative;
+
+    box-shadow: var(--gray-shadow);
+    background-color: red;
+    border-radius: .4rem;
+}
+
+
+.main-big-slider-item-action {
+
 }
