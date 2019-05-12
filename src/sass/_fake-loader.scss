@@ -1,0 +1,23 @@
+.fake-loader {
+    display: block;
+    height: .2rem;
+
+    animation: fake-loader 1s cubic-bezier(.65, 0.64, 0.58,-0.17);
+    background-color: var(--main-ang-color);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
+}
+
+@keyframes fake-loader {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}

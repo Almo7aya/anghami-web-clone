@@ -1,5 +1,6 @@
 :root {
   --font: 'Roboto', sans-serif;
+  --main-ang-color: #8d00f2;
   --main-bg-color: #1b1b1b;
   --sec-bg-color: #2e2e2e;
   --thr-bg-color: #282828;
@@ -18,6 +19,22 @@
   grid-template-rows: 60px 1fr 60px;
   height: 100vh;
   grid-template-areas: "header header header" "navbar main aside" "navbar player player"; }
+
+.fake-loader {
+  display: block;
+  height: .2rem;
+  animation: fake-loader 1s cubic-bezier(0.65, 0.64, 0.58, -0.17);
+  background-color: var(--main-ang-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+
+@keyframes fake-loader {
+  from {
+    width: 0%; }
+  to {
+    width: 100%; } }
 
 .header {
   grid-area: header;
