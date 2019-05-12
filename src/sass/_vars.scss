@@ -1,0 +1,28 @@
+// = = = css vars
+:root {
+    --font: 'Roboto', sans-serif;
+
+    // colors
+    --main-bg-color: #1b1b1b;
+    --sec-bg-color: #2e2e2e;
+    --thr-bg-color: #282828;
+
+    --main-text-color: #e8e8e8;
+    --sec-text-color: #e6e6e6;
+
+    --black-text-color: #010101;
+
+    // shadow
+    --gray-shadow:  rgba(0, 0, 0, 0.50) 0px 1px 8px 0px;
+
+    // navbar
+    --navbar-icon-color: #919191;
+
+    // imgs
+    --main-logo: url("https://anghamiwebcdn.akamaized.net/web/assets/img/anghami-logo-white.png");
+    --user-avatar: url("https://anghamiartwork.akamaized.net/user/1555293662443.jpg");
+    --plus-gradient: linear-gradient(to right,#e13f8c 0,#9d2ad5 46%,#517bdd 100%);
+
+}
+
+// = = = scss vars

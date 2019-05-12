@@ -1,0 +1,134 @@
+.header {
+    grid-area: header;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    z-index: 9;
+    background-color: var(--main-bg-color);
+    box-shadow: var(--gray-shadow);
+    padding: 0 1.5rem;
+}
+
+.header-logo-link {
+    display: block;
+    width: 13.6rem;
+    height: 100%;
+
+    background-image: var(--main-logo);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header-search {
+    flex: .5;
+
+    padding: 0 2.5rem;
+
+    position: relative;
+
+    &::after {
+        @include material-icon-font-default;
+
+        content: "search";
+
+        position: absolute;
+
+        right: 3rem;
+
+        @include center-y;
+    }
+}
+
+.header-search-box {
+    width: 100%;
+    padding: .9rem 1rem;
+
+    background-color: var(--sec-bg-color);
+    border: none;
+    border-radius: 1rem;
+
+    color: var(--main-text-color);
+}
+
+.header-actions {
+    flex: 1;
+
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.header-btn {
+    padding: .7rem 1.2rem;
+    margin: 0 .6rem;
+
+    border: none;
+    border-radius: 1rem;
+
+    font-weight: 700;
+    font-size: 1.45rem;
+
+    color: var(--black-text-color);
+}
+
+.header-icon {
+    margin: 0 .6rem;
+
+    i {
+        color: var(--main-text-color);
+    }
+}
+
+.header-user-profile {
+    height: 4.5rem;
+    min-width: 4.5rem;
+    margin: .9rem;
+    margin-right: 5.5rem;
+
+    border: .1rem solid var(--main-text-color);
+    border-radius: 50%;
+
+    background-image: var(--user-avatar);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: relative;
+
+    &.plus .plus-mark {
+        display: block;
+    }
+
+    &::after {
+        @include material-icon-font-default;
+
+        font-size: 28px;
+
+        content: "arrow_drop_down";
+
+        position: absolute;
+        right: -4rem;
+        @include center-y;
+    }
+}
+
+.plus-mark {
+    display: none;
+    padding: .1rem .7rem;
+
+    background-image: var(--plus-gradient);
+
+    border-radius: .7rem;
+
+    position: absolute;
+    bottom: -0.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 1rem;
+}
