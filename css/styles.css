@@ -577,8 +577,8 @@
   transition: 200ms all;
   z-index: 10;
   text-align: center; }
-  .responsive-dialog img {
-    margin: 3rem; }
+  .responsive-dialog img, .responsive-dialog h3 {
+    margin: 2rem; }
 
 @media screen and (max-width: 1000px) {
   .responsive-dialog-overlay {
