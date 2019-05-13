@@ -14,6 +14,7 @@
 
     --black-text-color: #010101;
 
+    --overlay-color: rgba(0, 0, 0, 0.20);
 
     // sizes
     --header-height: 6rem;
@@ -21,8 +22,15 @@
     --navbar-width: 22.7rem;
     --navbar-toggler-height: 5.5rem;
 
+    --main-big-slider-width: 21.5rem;
+    --main-big-slider-height: 21.5rem;
+
+    --main-wide-slider-width: 29rem;
+    --main-wide-slider-height: 11.0rem;
+
+
     // shadow
-    --gray-shadow:  rgba(0, 0, 0, 0.50) 0px 1px 8px 0px;
+    --gray-shadow: rgba(0, 0, 0, 0.50) 0px 1px 8px 0px;
 
     // navbar
     --navbar-icon-color: #919191;
@@ -33,7 +41,7 @@
     // images
     --main-logo: url("https://anghamiwebcdn.akamaized.net/web/assets/img/anghami-logo-white.png");
     --user-avatar: url("https://anghamiartwork.akamaized.net/user/1555293662443.jpg");
-    --plus-gradient: linear-gradient(to right,#e13f8c 0,#9d2ad5 46%,#517bdd 100%);
+    --plus-gradient: linear-gradient(to right, #e13f8c 0, #9d2ad5 46%, #517bdd 100%);
 
 }
 
