@@ -1,0 +1,18 @@
+.beating-heart {
+    animation: beating-heart 800ms infinite cubic-bezier(0, 1.37, 1,-0.2) backwards;
+    display: inline-block;
+
+    color: var(--main-ang-color);
+
+    margin: 0 .5rem;
+}
+
+@keyframes beating-heart {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(2);
+    }
+}

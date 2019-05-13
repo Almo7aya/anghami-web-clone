@@ -25,6 +25,18 @@
   --user-avatar: url("https://anghamiartwork.akamaized.net/user/1555293662443.jpg");
   --plus-gradient: linear-gradient(to right, #e13f8c 0, #9d2ad5 46%, #517bdd 100%); }
 
+.beating-heart {
+  animation: beating-heart 800ms infinite cubic-bezier(0, 1.37, 1, -0.2) backwards;
+  display: inline-block;
+  color: var(--main-ang-color);
+  margin: 0 .5rem; }
+
+@keyframes beating-heart {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(2); } }
+
 .main-grid-container {
   display: grid;
   grid-template-columns: var(--navbar-width) 2.65fr 1fr;
