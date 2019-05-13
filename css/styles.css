@@ -25,6 +25,13 @@
   --user-avatar: url("https://anghamiartwork.akamaized.net/user/1555293662443.jpg");
   --plus-gradient: linear-gradient(to right, #e13f8c 0, #9d2ad5 46%, #517bdd 100%); }
 
+:root:target {
+  --navbar-width: 6rem;
+  --main-big-slider-width: 24.5rem;
+  --main-big-slider-height: 24.5rem;
+  --main-wide-slider-width: 34rem;
+  --main-wide-slider-height: 14.0rem; }
+
 .beating-heart {
   animation: beating-heart 800ms infinite cubic-bezier(0, 1.37, 1, -0.2) backwards;
   display: inline-block;
@@ -191,6 +198,9 @@
   padding: .7rem 1.7rem .5rem 0;
   overflow-y: auto; }
 
+:root:target .navbar-items-holder {
+  padding: .7rem 0 .5rem 0; }
+
 .navbar-item {
   min-height: 4rem;
   display: flex;
@@ -203,9 +213,18 @@
     background-color: var(--navbar-active-item-bg-color);
     font-weight: bold; }
 
+:root:target .navbar-item {
+  padding: 1.8rem 0; }
+
+:root:target .navbar-item:not([class*="-main"]) {
+  display: none; }
+
 .navbar-item-icon {
   margin: 0 1rem;
   line-height: .6rem; }
+
+:root:target .navbar-item-icon i {
+  font-size: 2.7rem; }
 
 .navbar-item-img {
   margin: .85rem 1rem;
@@ -216,8 +235,14 @@
   .navbar-item-img img {
     max-width: 100%; }
 
+:root:target .navbar-item-img {
+  display: none; }
+
 .navbar-item-text {
   font-size: 1.35rem; }
+
+:root:target .navbar-item-text {
+  display: none; }
 
 .navbar-heading {
   min-height: 4rem;
@@ -226,6 +251,9 @@
   justify-content: space-between;
   padding: .9rem 0 .9rem 1.4rem;
   border-top: 0.1rem solid var(--navbar-border-color); }
+
+:root:target .navbar-heading {
+  display: none; }
 
 .navbar-heading-title {
   text-transform: uppercase;
@@ -242,10 +270,16 @@
     background-color: transparent;
     color: var(--navbar-title-color); }
 
+:root:target .navbar-item-add-playlist {
+  display: none; }
+
 .navbar-lead {
   margin: 1.2rem;
   font-size: 1.2rem;
   color: var(--navbar-title-color); }
+
+:root:target .navbar-lead {
+  display: none; }
 
 .navbar-toggler {
   height: var(--navbar-toggler-height);
@@ -259,6 +293,16 @@
     transition: 300ms all; }
   .navbar-toggler:hover i {
     transform: translateX(-0.5rem); }
+  .navbar-toggler-open {
+    display: none;
+    text-align: center; }
+    .navbar-toggler-open:hover i {
+      transform: translateX(0.5rem); }
+
+:root:target .navbar-toggler {
+  display: none; }
+  :root:target .navbar-toggler-open {
+    display: block; }
 
 .main-section {
   grid-area: main;
@@ -504,7 +548,8 @@ body {
   font-family: var(--font);
   font-size: 1.6rem;
   color: var(--main-text-color);
-  height: 100vh; }
+  max-height: 100vh;
+  overflow: hidden; }
 
 a,
 a:active,
