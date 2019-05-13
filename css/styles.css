@@ -8,6 +8,7 @@
   --sec-text-color: #e6e6e6;
   --black-text-color: #010101;
   --overlay-color: rgba(0, 0, 0, 0.20);
+  --overlay-color-2: rgba(0, 0, 0, 0.3);
   --header-height: 6rem;
   --player-height: 7.5rem;
   --navbar-width: 22.7rem;
@@ -503,13 +504,21 @@
 .player-current-song-info-text {
   flex: 1;
   margin: 0 2rem; }
+  .player-current-song-info-text h4 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; }
   .player-current-song-info-text p {
     font-size: 1.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     margin-top: .5rem;
     color: var(--navbar-icon-color); }
 
 .player-current-song-info-time {
   font-size: 1.2rem;
+  white-space: nowrap;
   color: var(--navbar-icon-color); }
   .player-current-song-info-time span {
     color: var(--main-text-color); }
@@ -528,6 +537,59 @@
   .player-volume i {
     margin: 0 1rem;
     font-size: 2.6rem; }
+
+@media screen and (max-width: 1260px) {
+  .player-holder {
+    padding: 0 2rem; }
+  .player-current-song-info {
+    margin: 0; }
+  .player-controls {
+    margin: 0; }
+  .player-other-devices,
+  .player-queue,
+  .player-volume,
+  .player-current-song-info-time {
+    display: none; } }
+
+.responsive-dialog-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--overlay-color-2);
+  z-index: 15;
+  opacity: 0;
+  pointer-events: none;
+  transition: 200ms all;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.responsive-dialog {
+  width: 33rem;
+  height: 40rem;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--main-bg-color);
+  box-shadow: var(--gray-shadow);
+  transform: translateY(-10rem);
+  transition: 200ms all;
+  z-index: 10;
+  text-align: center; }
+  .responsive-dialog img {
+    margin: 3rem; }
+
+@media screen and (max-width: 1000px) {
+  .responsive-dialog-overlay {
+    opacity: 1;
+    pointer-events: initial; }
+  .responsive-dialog {
+    transform: translateY(0); }
+  .main-grid-container {
+    filter: blur(1rem); }
+  .player {
+    display: none; } }
 
 .aside {
   grid-area: aside;
@@ -549,7 +611,8 @@ body {
   font-size: 1.6rem;
   color: var(--main-text-color);
   max-height: 100vh;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: var(--main-bg-color); }
 
 a,
 a:active,

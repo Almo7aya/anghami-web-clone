@@ -80,7 +80,6 @@
     align-items: center;
 }
 
-
 .player-controls {
     height: 100%;
 
@@ -133,8 +132,18 @@
     flex: 1;
     margin: 0 2rem;
 
+    h4 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
     p {
         font-size: 1.5rem;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
 
         margin-top: .5rem;
         color: var(--navbar-icon-color);
@@ -143,6 +152,7 @@
 
 .player-current-song-info-time {
     font-size: 1.2rem;
+    white-space: nowrap;
 
     color: var(--navbar-icon-color);
 
@@ -166,5 +176,26 @@
     i {
         margin: 0 1rem;
         font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .player-holder {
+        padding: 0 2rem;
+    }
+
+    .player-current-song-info {
+        margin: 0;
+    }
+
+    .player-controls {
+        margin: 0;
+    }
+
+    .player-other-devices,
+    .player-queue,
+    .player-volume,
+    .player-current-song-info-time {
+        display: none;
     }
 }
