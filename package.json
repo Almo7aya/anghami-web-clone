@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass -w ./src/sass/main.scss ./src/css/styles.css",
-    "serve": "lite-server --baseDir  ./src/",
+    "compile:sass": "node-sass -w ./sass/main.scss ./css/styles.css",
+    "serve": "lite-server --baseDir .",
     "start": "npm-run-all --parallel compile:sass serve"
   },
   "keywords": [],
