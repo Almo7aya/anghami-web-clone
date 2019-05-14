@@ -1,14 +1,14 @@
-@import "vars";
-@import "mixins";
-@import "common";
-@import "grid";
-@import "fake-loader";
-@import "header";
-@import "navbar";
-@import "main-section";
-@import "player";
-@import "responsive-dialog";
-@import "aside";
+@import "base/vars";
+@import "base/mixins";
+@import "base/common";
+@import "base/grid";
+@import "components/fake-loader";
+@import "components/header";
+@import "components/navbar";
+@import "components/main-section";
+@import "components/player";
+@import "components/responsive-dialog";
+@import "components/aside";
 
 *,
 *::after,
