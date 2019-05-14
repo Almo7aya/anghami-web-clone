@@ -153,6 +153,8 @@
     grid-auto-columns: var(--main-big-slider-width);
     column-gap: 1.8rem;
     grid-auto-flow: column;
+
+    border-radius: .4rem;
 }
 
 .main-wide-slider-holder {
@@ -163,4 +165,6 @@
     grid-auto-columns: var(--main-wide-slider-width);
     column-gap: 1.8rem;
     grid-auto-flow: column;
+
+    border-radius: .4rem;
 }

@@ -403,7 +403,8 @@
   grid-auto-rows: var(--main-big-slider-height);
   grid-auto-columns: var(--main-big-slider-width);
   column-gap: 1.8rem;
-  grid-auto-flow: column; }
+  grid-auto-flow: column;
+  border-radius: .4rem; }
 
 .main-wide-slider-holder {
   overflow-x: auto;
@@ -411,7 +412,8 @@
   grid-auto-rows: var(--main-wide-slider-height);
   grid-auto-columns: var(--main-wide-slider-width);
   column-gap: 1.8rem;
-  grid-auto-flow: column; }
+  grid-auto-flow: column;
+  border-radius: .4rem; }
 
 .player {
   grid-area: player;
