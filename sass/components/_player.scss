@@ -156,7 +156,8 @@
 
     color: var(--navbar-icon-color);
 
-    span {
+    &-light {
+        display: inline;
         color: var(--main-text-color);
     }
 }

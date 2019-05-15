@@ -1,0 +1,38 @@
+.playing-song-timer {
+    display: inline;
+
+    &-minutes::after {
+        content: "0";
+        animation: minutes-count 180s 60s linear infinite;
+    }
+
+    &-seconds::after {
+        content: "0";
+        animation: seconds-count 60s linear infinite;
+    }
+}
+
+@keyframes seconds-count {
+    @for $i from 0 through 100 {
+        #{$i * 1%} {
+            $val: floor((60 * $i) / 100);
+            @if $val < 10 {
+                $val: "0"+ $val;
+            }
+            content: "#{$val}";
+        }
+    }
+}
+
+
+@keyframes minutes-count {
+    0% {
+        content: "1";
+    }
+    50% {
+        content: "2";
+    }
+    100% {
+        content: "3";
+    }
+}
