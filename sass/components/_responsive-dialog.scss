@@ -61,6 +61,7 @@
     }
 
     .player {
-        display: none;
+        width: 0;
+        visibility: hidden;
     }
 }

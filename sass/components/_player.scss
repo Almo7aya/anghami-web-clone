@@ -227,18 +227,13 @@
         padding: 0 2rem;
     }
 
-    .player-current-song-info {
-        margin: 0;
-    }
-
     .player-controls {
         margin: 0;
     }
 
     .player-other-devices,
     .player-queue,
-    .player-volume,
-    .player-current-song-info-time {
+    .player-volume {
         display: none;
     }
 }
