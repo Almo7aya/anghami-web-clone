@@ -437,6 +437,12 @@
     height: 2rem;
     right: -1rem; }
 
+@keyframes width-animation {
+  from {
+    width: 0%; }
+  to {
+    width: 100%; } }
+
 .player-progress-line {
   width: 100%;
   height: .4rem;
@@ -444,14 +450,16 @@
   left: 0;
   bottom: 0;
   background-color: var(--main-text-color);
-  transition: 200ms all; }
+  transition: 200ms all;
+  animation: width-animation 4s cubic-bezier(0.09, 0.51, 0.63, 0.07) forwards; }
 
 .player-progress-current {
   height: 100%;
   width: 40%;
   position: relative;
   background-image: var(--plus-gradient);
-  transition: 200ms all; }
+  transition: 200ms all;
+  animation: width-animation 177s linear forwards; }
   .player-progress-current::after {
     content: "";
     display: block;
@@ -483,14 +491,29 @@
     color: var(--sec-text-color); }
 
 .player-play {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   background-color: var(--main-ang-color);
   text-align: center; }
   .player-play i {
     font-size: 4rem;
-    line-height: 4.5rem; }
+    line-height: 5rem; }
+    .player-play i::after {
+      content: "pause"; }
+
+#player-play-state {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+  #player-play-state:checked ~ .player-holder .player-play i::after {
+    content: "play_arrow"; }
+  #player-play-state:checked ~ .player-progress .player-progress-current,
+  #player-play-state:checked ~ .player-holder .playing-song-timer-minutes::after,
+  #player-play-state:checked ~ .player-holder .playing-song-timer-seconds::after {
+    animation-play-state: paused; }
 
 .player-current-song-info {
   height: 100%;
@@ -501,7 +524,8 @@
 
 .player-current-song-info-img {
   width: 6rem;
-  border-radius: .8rem; }
+  border-radius: .8rem;
+  border: 0.1rem solid var(--main-text-color); }
 
 .player-current-song-info-text {
   flex: 1;
@@ -558,10 +582,10 @@
   display: inline; }
   .playing-song-timer-minutes::after {
     content: "0";
-    animation: minutes-count 180s 60s linear infinite; }
+    animation: minutes-count 120s 60s linear forwards; }
   .playing-song-timer-seconds::after {
     content: "0";
-    animation: seconds-count 60s linear infinite; }
+    animation: seconds-count 60s linear 3 forwards; }
 
 @keyframes seconds-count {
   0% {
@@ -770,10 +794,8 @@
 @keyframes minutes-count {
   0% {
     content: "1"; }
-  50% {
-    content: "2"; }
   100% {
-    content: "3"; } }
+    content: "2"; } }
 
 .responsive-dialog-overlay {
   width: 100%;

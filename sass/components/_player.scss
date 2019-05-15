@@ -32,6 +32,16 @@
     }
 }
 
+@keyframes width-animation {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
 .player-progress-line {
     width: 100%;
     height: .4rem;
@@ -42,6 +52,8 @@
 
     background-color: var(--main-text-color);
     transition: 200ms all;
+
+    animation: width-animation 4s cubic-bezier(0.09, 0.51, 0.63, 0.07) forwards;
 }
 
 .player-progress-current {
@@ -52,6 +64,8 @@
 
     background-image: var(--plus-gradient);
     transition: 200ms all;
+
+    animation: width-animation 177s linear forwards;
 
     &::after {
         content: "";
@@ -98,8 +112,8 @@
 }
 
 .player-play {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 5rem;
+    height: 5rem;
 
     border-radius: 50%;
     background-color: var(--main-ang-color);
@@ -108,7 +122,33 @@
 
     i {
         font-size: 4rem;
-        line-height: 4.5rem;
+        line-height: 5rem;
+
+        &::after {
+            content: "pause";
+        }
+    }
+
+}
+
+#player-play-state {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked {
+        & ~ .player-holder .player-play i::after {
+            content: "play_arrow";
+        }
+
+        // pause the line progress and the timer
+        & ~ .player-progress .player-progress-current,
+        & ~ .player-holder .playing-song-timer-minutes::after,
+        & ~ .player-holder .playing-song-timer-seconds::after {
+            animation-play-state: paused;
+        }
     }
 }
 
@@ -126,6 +166,8 @@
     width: 6rem;
 
     border-radius: .8rem;
+
+    border: .1rem solid var(--main-text-color);
 }
 
 .player-current-song-info-text {
