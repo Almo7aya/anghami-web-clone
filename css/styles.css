@@ -837,7 +837,8 @@
     overflow: hidden; }
   .player {
     width: 0;
-    visibility: hidden; } }
+    visibility: hidden;
+    overflow: hidden; } }
 
 .aside {
   grid-area: aside;
