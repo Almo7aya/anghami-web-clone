@@ -53,7 +53,7 @@
     background-color: var(--main-text-color);
     transition: 200ms all;
 
-    animation: width-animation 4s cubic-bezier(0.09, 0.51, 0.63, 0.07) forwards;
+    animation: width-animation 3s cubic-bezier(0, 1.02, 0.88, 0.26) forwards;
 }
 
 .player-progress-current {

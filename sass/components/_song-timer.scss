@@ -7,8 +7,8 @@
     }
 
     &-seconds::after {
-        content: "0";
-        animation: seconds-count 60s linear 3 forwards;
+        content: "57";
+        animation: seconds-count 60s linear 3;
     }
 }
 

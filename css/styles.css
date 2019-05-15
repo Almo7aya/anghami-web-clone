@@ -451,7 +451,7 @@
   bottom: 0;
   background-color: var(--main-text-color);
   transition: 200ms all;
-  animation: width-animation 4s cubic-bezier(0.09, 0.51, 0.63, 0.07) forwards; }
+  animation: width-animation 3s cubic-bezier(0, 1.02, 0.88, 0.26) forwards; }
 
 .player-progress-current {
   height: 100%;
@@ -584,8 +584,8 @@
     content: "0";
     animation: minutes-count 120s 60s linear forwards; }
   .playing-song-timer-seconds::after {
-    content: "0";
-    animation: seconds-count 60s linear 3 forwards; }
+    content: "57";
+    animation: seconds-count 60s linear 3; }
 
 @keyframes seconds-count {
   0% {
