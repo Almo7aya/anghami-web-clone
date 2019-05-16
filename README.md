@@ -10,6 +10,6 @@ I was windring about how complex is Anghami's web client layout is so I decided 
 
 + No JavaScript I forced my self to only use CSS with 0 JavaScript
 
-+ Make some alive elements without JavaScript like the navbar it's collapsable *Try it*
++ Make some alive elements without JavaScript like the navbar it's collapsable and the player you can toggle the playing *Try them*
 
 > I enjoyed creating this project, _I know *CSS* is fun_
