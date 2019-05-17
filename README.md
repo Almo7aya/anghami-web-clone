@@ -2,7 +2,7 @@
 
 ## [Live Demo](https://almo7aya.github.io/anghami-web-clone/)
 
-I was wondering about how complex is Anghami's web client layout is so I decided to create a clone of it using modern *CSS* techniques.
+I was wondering about how complex is Anghami's web client layout so I decided to create a clone of it using modern *CSS* techniques.
 
 + CSS grid is awesome when it works with flexbox together.
 
