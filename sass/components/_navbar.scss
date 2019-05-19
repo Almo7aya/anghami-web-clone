@@ -141,6 +141,8 @@
     justify-content: flex-end;
     align-items: center;
 
+    border-top: .1rem solid var(--navbar-border-color);
+
     cursor: pointer;
 
     i {
