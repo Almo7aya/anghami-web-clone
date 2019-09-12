@@ -15,6 +15,10 @@
     &:hover {
         background-color: var(--main-bg-color);
     }
+
+    &.active {
+        background-color: var(--thr-bg-color);
+    }
 }
 
 .list-item-img {
