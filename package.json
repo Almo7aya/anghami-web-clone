@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass -w ./sass/main.scss ./css/styles.css",
+    "compile:sass": "node-sass -w ./sass/main.scss ./css/styles-edited.css",
     "serve": "lite-server --baseDir .",
     "start": "npm-run-all --parallel compile:sass serve"
   },
