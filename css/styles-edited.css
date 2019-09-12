@@ -563,25 +563,6 @@
   grid-area: aside;
   background-color: var(--main-bg-color); }
 
-.section-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 10rem; }
-
-.section-list-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 7rem;
-  padding: 2rem; }
-  .section-list-item:hover {
-    background-color: var(--main-bg-color); }
-
-.list-item-img {
-  overflow: hidden; }
-  .list-item-img img {
-    min-height: 100%; }
-
 *,
 *::after,
 *::before {
